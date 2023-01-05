@@ -1,0 +1,12 @@
+#!/command/with-contenv bash
+
+source /assets/functions/00-container
+set -a
+prepare_service
+set +a
+PROCESS_NAME="argus"
+
+bootstrap_filesystem
+configure_argus
+
+liftoff

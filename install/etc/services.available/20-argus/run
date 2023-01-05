@@ -1,0 +1,32 @@
+#!/command/with-contenv bash
+
+source /assets/functions/00-container
+PROCESS_NAME="argus"
+set -a
+prepare_service defaults single
+set +a
+
+check_container_initialized
+check_service_initialized init
+
+liftoff
+
+case "${LOG_TYPE,,}" in
+    both )
+        out=/dev/stdout
+        pipe=" sudo -u argus tee -a ${LOG_PATH}"/"${LOG_FILE}"
+    ;;
+    console )
+        out=/dev/stdout
+        pipe=" tee"
+    ;;
+    file )
+        out="${LOG_PATH}"/"${LOG_FILE}"
+        pipe=" sleep 0.1"
+    ;;
+esac
+
+print_start "Starting Argus ${ARGUS_VERSION}"
+s6-setuidgid argus \
+                            exec argus \
+                                        --config.file "${CONFIG_PATH}"/"${CONFIG_FILE}" ${ARGUS_ARGS} 2>&1 >> ${out} | ${pipe}

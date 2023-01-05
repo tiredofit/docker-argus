@@ -1,0 +1,28 @@
+services:
+  argus-app:
+    image: tiredofit/argus:latest
+    container_name: argus-app
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.argus.rule=Host(`argus.example.com`)
+      - traefik.http.services.argus.loadbalancer.server.port=80
+    volumes:
+      - ./config:/config
+      - ./data:/data
+      - ./logs/argus:/logs/
+      - ./logs/nginx:/www/nginx/
+    environment:
+      - TIMEZONE=America/Vancouver
+      - CONTAINER_NAME=argus-app
+
+      - SETUP_TYPE=AUTO
+    networks:
+      - proxy
+      - services
+    restart: always
+
+networks:
+  proxy:
+    external: true
+  services:
+    external: true
