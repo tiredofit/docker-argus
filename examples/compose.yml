@@ -6,6 +6,8 @@ services:
       - traefik.enable=true
       - traefik.http.routers.argus.rule=Host(`argus.example.com`)
       - traefik.http.services.argus.loadbalancer.server.port=80
+      - traefik.http.middlewares.sslheader.headers.customrequestheaders.X-Forwarded-Proto=https,wss
+      - traefik.http.routers.argus.middlewares=sslheader@docker
     volumes:
       - ./config:/config
       - ./data:/data

@@ -25,6 +25,7 @@ bootstrap_filesystem() {
 }
 
 configure_argus() {
+    update_template /etc/nginx/sites.available/argus.conf LISTEN_PORT
     if [ "${SETUP_TYPE,,}" = "auto" ] || [ ! -f "${CONFIG_PATH}"/"${CONFIG_FILE}" ] ; then
         print_notice "[configure_argus] Configuring Argus settings"
         s6-setuidgid argus yq -i    '

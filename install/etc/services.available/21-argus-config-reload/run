@@ -1,0 +1,19 @@
+#!/command/with-contenv bash
+
+source /assets/functions/00-container
+prepare_service defaults 20-argus
+PROCESS_NAME="argus-config-reload"
+
+check_container_initialized
+check_service_initialized init
+liftoff
+
+if var_true "${RESTART_ON_CONFIG_CHANGE}" ; then
+    CONTAINER_PROCESS_RUNAWAY_LIMIT=32767
+fi
+
+while inotifywait -q -e create,delete,modify,attrib "${CONFIG_PATH}"/"${CONFIG_FILE}" ; do
+  print_info "Restarting Argus due to a detected configuration file change"
+  pkill argus
+  exit 0
+done

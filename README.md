@@ -104,28 +104,30 @@ Be sure to view the following repositories to understand all the customizable op
 
 #### Container Options
 
-| Variable        | Description                                      | Default      |
-| --------------- | ------------------------------------------------ | ------------ |
-| `CONFIG_FILE`   | Configuration File                               | `argus.yaml` |
-| `CONFIG_PATH`   | Path for configuration files                     | `/config/`   |
-| `DATA_FILE`     | Database file name                               | `argus.db`   |
-| `DATA_PATH`     | Database files                                   | `/data/`     |
-| `LISTEN_IP`     | Listening IP                                     | `0.0.0.0`    |
-| `LISTEN_PORT`   | Listening Port of Argus                          | `8080`       |
-| `LISTEN_PREFIX` | Root URL                                         | `/`          |
-| `LOG_FILE`      | Log Name                                         | `argus.log`  |
-| `LOG_PATH`      | Logfile location                                 | `/logs/`     |
-| `LOG_TYPE`      | `CONSOLE` `FILE` `BOTH`                          | `CONSOLE`    |
-| `SETUP_TYPE`    | `AUTO` `MANUAL`                                  | `AUTO`       |
+| Variable                   | Description                                | Default      |
+| -------------------------- | ------------------------------------------ | ------------ |
+| `CONFIG_FILE`              | Configuration File                         | `argus.yaml` |
+| `CONFIG_PATH`              | Path for configuration files               | `/config/`   |
+| `DATA_FILE`                | Database file name                         | `argus.db`   |
+| `DATA_PATH`                | Database files                             | `/data/`     |
+| `LISTEN_IP`                | Listening IP                               | `0.0.0.0`    |
+| `LISTEN_PORT`              | Listening Port of Argus                    | `8080`       |
+| `LISTEN_PREFIX`            | Root URL                                   | `/`          |
+| `LOG_FILE`                 | Log Name                                   | `argus.log`  |
+| `LOG_PATH`                 | Logfile location                           | `/logs/`     |
+| `LOG_TYPE`                 | `CONSOLE` `FILE` `BOTH`                    | `CONSOLE`    |
+| `SETUP_TYPE`               | `AUTO` `MANUAL`                            | `AUTO`       |
+| `RESTART_ON_CONFIG_CHANGE` | Restart Argus on configuration file change | `TRUE`       |
+
 
 #### Argus Options
 
-| Variable        | Description                                      | Default      |
-| --------------- | ------------------------------------------------ | ------------ |
-| `ARGUS_ARGS`    | Arguments to pass to Argus process upon starting | ``           |
-| `ADMIN_PASS`    | (optional) Admin Password                        | `null`       |
-| `ADMIN_USER`    | (optional Admin User                             | `null`       |
-| `LOG_LEVEL`     | `DEBUG` `VERBOSE` `INFO` `WARNING` `ERROR`       | `INFO`       |
+| Variable     | Description                                      | Default |
+| ------------ | ------------------------------------------------ | ------- |
+| `ARGUS_ARGS` | Arguments to pass to Argus process upon starting | ``      |
+| `ADMIN_PASS` | (optional) Admin Password                        | `null`  |
+| `ADMIN_USER` | (optional Admin User                             | `null`  |
+| `LOG_LEVEL`  | `DEBUG` `VERBOSE` `INFO` `WARNING` `ERROR`       | `INFO`  |
 
 ### Networking
 

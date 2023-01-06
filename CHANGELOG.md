@@ -1,3 +1,13 @@
+## 1.1.0 2023-01-05 <dave at tiredofit dot ca>
+
+   ### Added
+      - Add RESTART_ON_CONFIG_CHANGE environment variable to detect configuration file changes
+
+   ### Changed
+      - Update examples
+      - Change nginx reverse proxy configuration to better support HTTP 1.1 / WSS
+
+
 ## 1.0.0 2023-01-05 <dave at tiredofit dot ca>
 
    ### Added

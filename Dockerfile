@@ -8,8 +8,7 @@ ARG ARGUS_VERSION
 
 ENV ARGUS_VERSION=${ARGUS_VERSION:-"0.11.0"} \
     ARGUS_REPO_URL=https://github.com/release-argus/Argus \
-    NGINX_MODE=PROXY \
-    NGINX_PROXY_URL=http://127.0.0.1:8080 \
+    NGINX_SITE_ENABLED="argus" \
     NGINX_ENABLE_CREATE_SAMPLE_HTML=FALSE \
     IMAGE_NAME="tiredofit/argus" \
     IMAGE_REPO_URL="https://github.com/tiredofit/docker-argus/"
