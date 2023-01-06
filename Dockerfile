@@ -13,6 +13,8 @@ ENV ARGUS_VERSION=${ARGUS_VERSION:-"0.11.0"} \
     IMAGE_NAME="tiredofit/argus" \
     IMAGE_REPO_URL="https://github.com/tiredofit/docker-argus/"
 
+COPY build-assets /build-assets
+
 RUN source assets/functions/00-container && \
     set -x && \
     addgroup -S -g 10000 argus && \
@@ -35,6 +37,8 @@ RUN source assets/functions/00-container && \
                     && \
     \
     clone_git_repo "${ARGUS_REPO_URL}" "${ARGUS_VERSION}" && \
+    if [ -d "/build-assets/src" ] && [ -n "$(ls -A "/build-assets/src" 2>/dev/null)" ]; then cp -R /build-assets/src/* ${GIT_REPO_SRC_ARGUS} ; fi; \
+    if [ -d "/build-assets/scripts" ] && [ -n "$(ls -A "/build-assets/scripts" 2>/dev/null)" ]; then for script in /build-assets/scripts/*.sh; do echo "** Applying $script"; bash $script; done && \ ; fi ; \
     make && \
     make build && \
     cp -R argus /usr/sbin && \
@@ -50,4 +54,3 @@ RUN source assets/functions/00-container && \
 EXPOSE 10000
 
 COPY install /
-

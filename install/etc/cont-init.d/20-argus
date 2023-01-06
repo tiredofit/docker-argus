@@ -8,5 +8,6 @@ PROCESS_NAME="argus"
 
 bootstrap_filesystem
 configure_argus
-
+custom_files "${CONTAINER_CUSTOM_PATH}" /
+custom_scripts "${CONTAINER_CUSTOM_SCRIPTS_PATH}"
 liftoff

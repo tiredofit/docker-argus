@@ -1,3 +1,11 @@
+## 1.2.0 2023-01-06 <dave at tiredofit dot ca>
+
+   ### Added
+      - Add build-assets directory for doing customizations upon building Dockerfile
+      - Introduce custom_files capability to overlay files in filesystem upon container start
+      - Introduce custom_scripts capability to execute scripts in container before process starts
+
+
 ## 1.1.0 2023-01-05 <dave at tiredofit dot ca>
 
    ### Added
