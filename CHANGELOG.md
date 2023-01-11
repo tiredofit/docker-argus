@@ -1,3 +1,9 @@
+## 1.2.1 2023-01-11 <dave at tiredofit dot ca>
+
+   ### Changed
+      - Remove /build-assets from final container
+
+
 ## 1.2.0 2023-01-06 <dave at tiredofit dot ca>
 
    ### Added

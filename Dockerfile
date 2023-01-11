@@ -46,7 +46,8 @@ RUN source assets/functions/00-container && \
     cp -R config.yml.example /assets/argus && \
     package remove .argus-build-deps && \
     package cleanup && \
-    rm -rf /root/.cache \
+    rm -rf /build-assets \
+           /root/.cache \
            /root/.gitconfig \
            /root/go \
            /usr/src/*
