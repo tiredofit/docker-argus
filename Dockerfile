@@ -38,8 +38,8 @@ RUN source assets/functions/00-container && \
     \
     clone_git_repo "${ARGUS_REPO_URL}" "${ARGUS_VERSION}" && \
     if [ -d "/build-assets/src" ] && [ -n "$(ls -A "/build-assets/src" 2>/dev/null)" ]; then cp -R /build-assets/src/* ${GIT_REPO_SRC_ARGUS} ; fi; \
+    ls -l web/ui/react-app/src/components/header && \
     if [ -d "/build-assets/scripts" ] && [ -n "$(ls -A "/build-assets/scripts" 2>/dev/null)" ]; then for script in /build-assets/scripts/*.sh; do echo "** Applying $script"; bash $script; done && \ ; fi ; \
-    make && \
     make build && \
     cp -R argus /usr/sbin && \
     mkdir -p /assets/argus && \

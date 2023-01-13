@@ -1,3 +1,9 @@
+## 1.2.2 2023-01-12 <dave at tiredofit dot ca>
+
+   ### Changed
+      - Fix for config watchdog
+
+
 ## 1.2.1 2023-01-11 <dave at tiredofit dot ca>
 
    ### Changed
