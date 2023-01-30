@@ -63,7 +63,7 @@ docker pull docker.io/tiredofdit/argus:(imagetag)
 Builds of the image are also available on the [Github Container Registry](https://github.com/tiredofit/docker-argus/pkgs/container/docker-argus) 
  
 ```
-docker pull ghcr.io/tiredofit/docker-argus/pkgs/container/docker-argus):(imagetag)
+docker pull ghcr.io/tiredofit/docker-argus:(imagetag)
 ``` 
 
 The following image tags are available along with their tagged release based on what's written in the [Changelog](CHANGELOG.md):
