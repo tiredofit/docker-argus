@@ -42,6 +42,18 @@ configure_argus() {
                                         .settings.basic_auth.password = env(ADMIN_PASS)
                                     ' "${CONFIG_PATH}"/"${CONFIG_FILE}"
 
+        if [ -n "${DEFAULT_SERVICE_CHECK_INTERVAL}" ] ; then
+            s6-setuidgid argus yq -i    '
+                                            .defaults.service.options.interval = env(DEFAULT_SERVICE_CHECK_INTERVAL)
+                                        ' "${CONFIG_PATH}"/"${CONFIG_FILE}"
+        fi
+
+        if [ -n "${DEFAULT_SERVICE_LATEST_VERSION_ACCESS_TOKEN}" ] ; then
+            s6-setuidgid argus yq -i    '
+                                            .defaults.service.latest_version.access_token = env(DEFAULT_LATEST_VERSION_ACCESS_TOKEN)
+                                        ' "${CONFIG_PATH}"/"${CONFIG_FILE}"
+        fi
+
         if ! grep -q "^service:" "${CONFIG_PATH}"/"${CONFIG_FILE}" ; then
             cat /assets/argus/config.yml.example | silent sudo -u argus tee -a "${CONFIG_PATH}"/"${CONFIG_FILE}"
         fi

@@ -1,3 +1,10 @@
+## 1.3.0 2023-02-09 <dave at tiredofit dot ca>
+
+   ### Added
+      - Add DEFAULT_SERVICE_CHECK_INTERVAL environment variable
+      - Add DEFAULT_SERVICE_LATEST_VERSION_ACCESS_TOKEN environment variable
+
+
 ## 1.2.3 2023-01-13 <dave at tiredofit dot ca>
 
    ### Added

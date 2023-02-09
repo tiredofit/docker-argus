@@ -60,11 +60,11 @@ Builds of the image are available on [Docker Hub](https://hub.docker.com/r/tired
 ```bash
 docker pull docker.io/tiredofdit/argus:(imagetag)
 ```
-Builds of the image are also available on the [Github Container Registry](https://github.com/tiredofit/docker-argus/pkgs/container/docker-argus) 
- 
+Builds of the image are also available on the [Github Container Registry](https://github.com/tiredofit/docker-argus/pkgs/container/docker-argus)
+
 ```
 docker pull ghcr.io/tiredofit/docker-argus:(imagetag)
-``` 
+```
 
 The following image tags are available along with their tagged release based on what's written in the [Changelog](CHANGELOG.md):
 
@@ -128,12 +128,14 @@ Be sure to view the following repositories to understand all the customizable op
 
 #### Argus Options
 
-| Variable     | Description                                      | Default |
-| ------------ | ------------------------------------------------ | ------- |
-| `ARGUS_ARGS` | Arguments to pass to Argus process upon starting | ``      |
-| `ADMIN_PASS` | (optional) Admin Password                        | `null`  |
-| `ADMIN_USER` | (optional Admin User                             | `null`  |
-| `LOG_LEVEL`  | `DEBUG` `VERBOSE` `INFO` `WARNING` `ERROR`       | `INFO`  |
+| Variable                                       | Description                                                       | Default |
+| ---------------------------------------------- | ----------------------------------------------------------------- | ------- |
+| `ARGUS_ARGS`                                   | Arguments to pass to Argus process upon starting                  | ``      |
+| `ADMIN_PASS`                                   | (optional) Admin Password                                         | `null`  |
+| `ADMIN_USER`                                   | (optional Admin User                                              | `null`  |
+| `DEFAULT_SERVICE_CHECK_INTERVAL`               | If exist set default service check interval                       |         |
+| `DEFAULT_SERVICE_LATEST_VERSION_ACCESS_TOKEN ` | If exist set default service latest release access token (github) |         |
+| `LOG_LEVEL`                                    | `DEBUG` `VERBOSE` `INFO` `WARNING` `ERROR`                        | `INFO`  |
 
 ### Networking
 
