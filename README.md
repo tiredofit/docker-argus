@@ -93,6 +93,7 @@ The following directories are used for configuration and can be mapped for persi
 | `/data/`   | Data files   |
 | `/logs/`   | Log Files    |
 | `/config/` | Config Files |
+| `/www/html/images` | Drop your own images if here if you wish to reference them |
 
 * * *
 ### Environment Variables

@@ -1,3 +1,9 @@
+## 1.4.0 2023-03-16 <dave at tiredofit dot ca>
+
+   ### Added
+      - Add capability to serve /images/ from the Nginx configuration (/www/html/images)
+
+
 ## 1.3.0 2023-02-09 <dave at tiredofit dot ca>
 
    ### Added
