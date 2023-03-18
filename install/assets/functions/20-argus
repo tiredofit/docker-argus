@@ -50,7 +50,7 @@ configure_argus() {
 
         if [ -n "${DEFAULT_SERVICE_LATEST_VERSION_ACCESS_TOKEN}" ] ; then
             s6-setuidgid argus yq -i    '
-                                            .defaults.service.latest_version.access_token = env(DEFAULT_LATEST_VERSION_ACCESS_TOKEN)
+                                            .defaults.service.latest_version.access_token = env(DEFAULT_SERVICE_LATEST_VERSION_ACCESS_TOKEN)
                                         ' "${CONFIG_PATH}"/"${CONFIG_FILE}"
         fi
 

@@ -88,11 +88,11 @@ Images are built primarily for `amd64` architecture, and may also include builds
 
 The following directories are used for configuration and can be mapped for persistent storage.
 
-| Directory  | Description  |
-| ---------- | ------------ |
-| `/data/`   | Data files   |
-| `/logs/`   | Log Files    |
-| `/config/` | Config Files |
+| Directory          | Description                                                |
+| ------------------ | ---------------------------------------------------------- |
+| `/data/`           | Data files                                                 |
+| `/logs/`           | Log Files                                                  |
+| `/config/`         | Config Files                                               |
 | `/www/html/images` | Drop your own images if here if you wish to reference them |
 
 * * *
@@ -100,7 +100,7 @@ The following directories are used for configuration and can be mapped for persi
 
 #### Base Images used
 
-This image relies on an [Alpine Linux](https://hub.docker.com/r/tiredofit/alpine) base image that relies on an [init system](https://github.com/just-containers/s6-overlay) for added capabilities. Outgoing SMTP capabilities are handlded via `msmtp`. Individual container performance monitoring is performed by [zabbix-agent](https://zabbix.org). Additional tools include: `bash`,`curl`,`less`,`logrotate`,`nano`,`vim`.
+This image relies on an [Alpine Linux](https://hub.docker.com/r/tiredofit/alpine) base image that relies on an [init system](https://github.com/just-containers/s6-overlay) for added capabilities. Outgoing SMTP capabilities are handlded via `msmtp`. Individual container performance monitoring is performed by [zabbix-agent](https://zabbix.org). Additional tools include: `bash`,`curl`,`less`,`logrotate`,`nano`,`vi`.
 
 Be sure to view the following repositories to understand all the customizable options:
 

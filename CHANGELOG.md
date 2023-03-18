@@ -1,3 +1,9 @@
+## 1.4.1 2023-03-18 <dave at tiredofit dot ca>
+
+   ### Changed
+      - Fix mismatch between DEFAULT_SERVICE_LATEST_VERSION_ACCESS_TOKEN
+
+
 ## 1.4.0 2023-03-16 <dave at tiredofit dot ca>
 
    ### Added
