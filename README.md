@@ -130,13 +130,13 @@ Be sure to view the following repositories to understand all the customizable op
 #### Argus Options
 
 | Variable                                       | Description                                                       | Default | `_FILE` |
-| ---------------------------------------------- | ----------------------------------------------------------------- | ------- | --- |
-| `ARGUS_ARGS`                                   | Arguments to pass to Argus process upon starting                  | ``      | x |
-| `ADMIN_PASS`                                   | (optional) Admin Password                                         | `null`  | x|
-| `ADMIN_USER`                                   | (optional Admin User                                              | `null`  | x |
-| `DEFAULT_SERVICE_CHECK_INTERVAL`               | If exist set default service check interval                       |         |  |
-| `DEFAULT_SERVICE_LATEST_VERSION_ACCESS_TOKEN ` | If exist set default service latest release access token (github) |         | x |
-| `LOG_LEVEL`                                    | `DEBUG` `VERBOSE` `INFO` `WARNING` `ERROR`                        | `INFO`  | |
+| ---------------------------------------------- | ----------------------------------------------------------------- | ------- | ------- |
+| `ARGUS_ARGS`                                   | Arguments to pass to Argus process upon starting                  | ``      | x       |
+| `ADMIN_PASS`                                   | (optional) Admin Password                                         | `null`  | x       |
+| `ADMIN_USER`                                   | (optional Admin User                                              | `null`  | x       |
+| `DEFAULT_SERVICE_CHECK_INTERVAL`               | If exist set default service check interval                       |         |         |
+| `DEFAULT_SERVICE_LATEST_VERSION_ACCESS_TOKEN ` | If exist set default service latest release access token (github) |         | x       |
+| `LOG_LEVEL`                                    | `DEBUG` `VERBOSE` `INFO` `WARNING` `ERROR`                        | `INFO`  |         |
 
 ### Networking
 
