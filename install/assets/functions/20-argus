@@ -25,6 +25,10 @@ bootstrap_filesystem() {
 }
 
 configure_argus() {
+    transform_file_var \
+                            ADMIN_PASS \
+                            ADMIN_USER \
+                            DEFAULT_SERVICE_LATEST_VERSION_ACCESS_TOKEN
     update_template /etc/nginx/sites.available/argus.conf LISTEN_PORT
     if var_false "${RESTART_ON_CONFIG_CHANGE}" ; then
         rm -rf /etc/services.available/21-argus-config-reload

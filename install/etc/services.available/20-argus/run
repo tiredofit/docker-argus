@@ -26,6 +26,7 @@ case "${LOG_TYPE,,}" in
     ;;
 esac
 
+tranform_file_var ARGUS ARGS
 print_start "Starting Argus ${ARGUS_VERSION}"
 s6-setuidgid argus \
                     exec argus \
