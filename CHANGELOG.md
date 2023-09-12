@@ -1,3 +1,9 @@
+## 1.5.7 2023-09-12 <dave at tiredofit dot ca>
+
+   ### Added
+      - Argus 0.13.3
+
+
 ## 1.5.6 2023-07-19 <dave at tiredofit dot ca>
 
    ### Added
