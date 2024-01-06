@@ -1,12 +1,12 @@
 ARG DISTRO=alpine
-ARG DISTRO_VARIANT=3.18
+ARG DISTRO_VARIANT=3.19
 
 FROM docker.io/tiredofit/nginx:${DISTRO}-${DISTRO_VARIANT}
 LABEL maintainer="Dave Conroy (github.com/tiredofit)"
 
 ARG ARGUS_VERSION
 
-ENV ARGUS_VERSION=${ARGUS_VERSION:-"0.13.3"} \
+ENV ARGUS_VERSION=${ARGUS_VERSION:-"0.14.0"} \
     ARGUS_REPO_URL=https://github.com/release-argus/Argus \
     NGINX_SITE_ENABLED="argus" \
     NGINX_ENABLE_CREATE_SAMPLE_HTML=FALSE \

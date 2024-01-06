@@ -1,3 +1,10 @@
+## 1.5.8 2024-01-06 <dave at tiredofit dot ca>
+
+   ### Added
+      - Argus 0.14.0
+      - Alpine 3.19 Base
+
+
 ## 1.5.7 2023-09-12 <dave at tiredofit dot ca>
 
    ### Added
