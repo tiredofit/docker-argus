@@ -1,3 +1,9 @@
+## 1.5.17 2024-04-23 <dave at tiredofit dot ca>
+
+   ### Changed
+      - Switch to Alpind Edge to support Go 1.22.x for building
+
+
 ## 1.5.16 2024-04-23 <dave at tiredofit dot ca>
 
    ### Added
