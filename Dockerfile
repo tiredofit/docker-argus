@@ -6,7 +6,7 @@ LABEL maintainer="Dave Conroy (github.com/tiredofit)"
 
 ARG ARGUS_VERSION
 
-ENV ARGUS_VERSION=${ARGUS_VERSION:-"0.19.3"} \
+ENV ARGUS_VERSION=${ARGUS_VERSION:-"0.19.4"} \
     ARGUS_REPO_URL=https://github.com/release-argus/Argus \
     NGINX_SITE_ENABLED="argus" \
     NGINX_ENABLE_CREATE_SAMPLE_HTML=FALSE \
