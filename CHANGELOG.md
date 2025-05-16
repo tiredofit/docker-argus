@@ -1,3 +1,10 @@
+## 1.5.32 2025-05-16 <dave at tiredofit dot ca>
+
+   ### Added
+      - Switch to tiredofit/nginx:alpine-edge for newer go build requirement
+      - Release Argus 0.26.2
+
+
 ## 1.5.31 2025-05-14 <dave at tiredofit dot ca>
 
    ### Added
